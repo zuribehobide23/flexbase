@@ -38,6 +38,8 @@ let orria = document.querySelector("body > div > div.flex.right > form > p:nth-c
 
 let indizea = 0;
 
+BesteLiburua ()
+
 function BesteLiburua () {
   const liburua = datubase[indizea];
   document.querySelector("#argazkia").src = BASE + liburua.filename;
@@ -54,7 +56,6 @@ aurrekoa.addEventListener("click", (event) => {
   event.preventDefault();
   if (indizea > 0) {
     indizea--;
-    
     BesteLiburua();
   }
 })
@@ -67,4 +68,3 @@ hurrengoa.addEventListener("click", (event) => {
   }
 })
 
-BesteLiburua();
