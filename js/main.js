@@ -34,3 +34,36 @@ let datubase = [
 
 const BASE = "https://covers.openlibrary.org/b/id/"
 
+let orria = document.querySelector("body > div > div.flex.right > form > p:nth-child(5) > input[type=submit]:nth-child(2)");
+
+let indizea = 0;
+
+function BesteLiburua () {
+  const liburua = datubase[indizea];
+  document.querySelector("#argazkia").src = BASE + liburua.filename;
+  document.querySelector("#izenburua").value = liburua.izenburua;
+  document.querySelector("#egilea").value = liburua.egilea;
+  document.querySelector("#isbn").value = liburua.isbn;
+  document.querySelector("#data").value = liburua.data;
+}
+
+let aurrekoa = document.querySelector("#aurrekoa");
+let hurrengoa = document.querySelector("#hurrengoa");
+
+aurrekoa.addEventListener("click", () => {
+  if (indizea > 0) {
+    indizea--;
+    preventDefault();
+    BesteLiburua();
+  }
+})
+
+hurrengoa.addEventListener("click", () => {
+  if (indizea < datubase.length - 1) {
+    indizea++;
+    preventDefault();
+    BesteLiburua();
+  }
+})
+
+BesteLiburua();

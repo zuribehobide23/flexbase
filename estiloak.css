@@ -1,5 +1,6 @@
 .flex-container {
     display: flex;
+    width: fit-content;
 }
 
 .flex {
@@ -7,17 +8,31 @@
     margin-right: 10px;
     color: black;
     padding-left: 5px;
-    
 }  
 
 .left {
+    padding: 10px;
     flex: 0.25;
+    padding-right: 30px;
+    padding-left: 20px;
 }
 
 .right {
     flex: 0.75;
 } 
 
-.felxright informazioa {
+#izenburua {
+    width: 550px;
+}
 
+p {
+    display: flex;        
+    align-items: center;  
+    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+label {
+    margin-right: 5px;  
 }
