@@ -50,18 +50,19 @@ function BesteLiburua () {
 let aurrekoa = document.querySelector("#aurrekoa");
 let hurrengoa = document.querySelector("#hurrengoa");
 
-aurrekoa.addEventListener("click", () => {
+aurrekoa.addEventListener("click", (event) => {
+  event.preventDefault();
   if (indizea > 0) {
     indizea--;
-    preventDefault();
+    
     BesteLiburua();
   }
 })
 
-hurrengoa.addEventListener("click", () => {
+hurrengoa.addEventListener("click", (event) => {
+  event.preventDefault();
   if (indizea < datubase.length - 1) {
     indizea++;
-    preventDefault();
     BesteLiburua();
   }
 })
