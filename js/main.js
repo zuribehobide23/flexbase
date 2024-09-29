@@ -68,3 +68,19 @@ hurrengoa.addEventListener("click", (event) => {
   }
 })
 
+let bilatu = document.querySelector("#bilatu");
+
+bilatu.addEventListener("click", (event) => {
+  event.preventDefault();
+  let liburuBerria = document.querySelector("#isbn").value;
+  let i = 0;
+  while(i < datubase.length){
+    let liburuaBilatu = datubase[i];
+    if(liburuaBilatu.isbn == liburuBerria){
+      indizea = i;
+      BesteLiburua();
+      break;
+    }
+    i++;
+  }
+})
